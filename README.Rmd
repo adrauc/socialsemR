@@ -1,0 +1,37 @@
+
+## Customized functions for my digital conetent analysis course
+
+Here are some customized functions for the course I teach in the Spring Semester 2017 at the University of Zurich. For convenience I crated a small package. Will update continiously.
+
+## How to install the package
+
+- To install the Github version of the package:
+  - Install devtools `if(!require("devtools")) install.packages("devtools")`
+  - Start a new session, load devtools, and install socialsemR from Github.
+  - `library(devtools)`
+  - `install_github("adrauc/socialsemR")`
+- Now you can load the library:
+  - `library(socialsemR)`
+- That's it, you can now use the functions in the package.
+
+## How to use the package
+
+Functions help for content analysis. Open automatically tweets, users, and posts on facebook:
+```{r}
+# for all functions: enter opens the next case, if you type quit and hit enter, it quits.
+
+# to open a facebook user: input is a vector with user ids (strings):
+open_user_fbaccount(comments_df[ ,"from_id"])
+
+# to open a specific tweet: input is a df from the streamAPI:
+open_tweet(tweets_df)
+
+# to open a specific facebook post: input is a vector with post ids (strings) and the username from the url
+open_facebook_post(facebook_posts_voice[ ,"id"], "TheVoiceOfGermany")
+
+# to open a specific instagram picture: input is a data frame with the columns "id", "comments", and "likes":
+open_pictures_insta(ensoie_df)
+
+
+```
+
