@@ -15,7 +15,7 @@ open_facebook_post(post_id, user_name)
 none, browser opens automatically
 }
 \description{
-Get all comments of a user
+Open a specific post in browser
 }
 \examples{
 \dontrun{

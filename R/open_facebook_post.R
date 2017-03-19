@@ -1,6 +1,6 @@
 #' open facebook post in browser
 #'
-#' @description Get all comments of a user
+#' @description Open a specific post in browser
 #'
 #' @param post_id,  Vector with post id as strings
 #' @param user_name String, must be the username in the url
