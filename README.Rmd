@@ -29,6 +29,10 @@ open_tweet(tweets_df)
 # to open a specific facebook post: input is a vector with post ids (strings) and the username from the url
 open_facebook_post(facebook_posts_voice[ ,"id"], "TheVoiceOfGermany")
 
+# to open a specific facebook comment: input is a vector with comment ids
+# and the username from the url
+open_facebook_comment(comments_df$id, "TheVoiceOfGermany")
+
 # to open a specific instagram picture: input is a data frame with the columns "id", "comments", and "likes":
 open_pictures_insta(ensoie_df)
 
