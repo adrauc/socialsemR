@@ -26,6 +26,9 @@ open_user_fbaccount(comments_df[ ,"from_id"])
 # to open a specific tweet: input is a df from the streamAPI:
 open_tweet(tweets_df)
 
+# to open a specific Twitter user: input is a df from the streamAPI:
+open_tweet_user(tweets_df)
+
 # to open a specific facebook post: input is a vector with post ids (strings) and the username from the url
 open_facebook_post(facebook_posts_voice[ ,"id"], "TheVoiceOfGermany")
 
