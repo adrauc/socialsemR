@@ -6,6 +6,6 @@ Author: Adrian Rauchfleisch <adrian.rauchfleisch@gmail.com>
 Maintainer: Adrian Rauchfleisch <adrian.rauchfleisch@gmail.com>
 Description: This package helps to access the API of the plattform Soundcloud.
     The package includes functions to access users, tracks, and comments.
-License: GPL-2
+License: GPL-3
 Encoding: UTF-8
 RoxygenNote: 5.0.1
