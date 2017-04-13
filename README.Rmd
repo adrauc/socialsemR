@@ -26,6 +26,9 @@ open_user_fbaccount(comments_df[ ,"from_id"])
 # to open a specific tweet: input is a df from the streamAPI:
 open_tweet(tweets_df)
 
+# to open a specific tweet (REST API): input is a df from the REST API:
+open_tweet_rest(tweets_df)
+
 # to open a specific Twitter user: input is a df from the streamAPI:
 open_tweet_user(tweets_df)
 
