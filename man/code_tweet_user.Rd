@@ -20,7 +20,7 @@ coding and open user in browser
 \examples{
 \dontrun{
 # to open a specific user: input is a df from the search API:
-open_tweet_user(user_df, 1)
+code_tweet_user(user_df, 1)
 }
 
 }
