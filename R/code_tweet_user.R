@@ -23,7 +23,7 @@ code_tweet_user <- function(user_df, startrow=1)
   readkey_code <- function(user_df=user_df)
   {
     cat( paste(user_df$name[i], user_df$description[i], user_df$location[i], user_df$lang[i],"\n", sep=" | ") )
-    cat (paste("Press [a] 'relevant' [s] 'not relevant' [d] 'open browser' or type [quit] to exit", "\n") )
+    message (paste("Press [a] 'relevant' [s] 'not relevant' [d] 'open browser' or type [quit] to exit", "\n") )
     input <- readline()
     return(input)
   }
