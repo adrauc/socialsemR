@@ -23,7 +23,7 @@ code_tweet_user <- function(user_df, startrow=1)
   readkey_code <- function(user_df=user_df)
   {
     cat( paste(user_df$name[i], user_df$description[i], user_df$location[i], user_df$lang[i], sep=" | ") )
-    cat ("Press [a] 'relevant' [s] 'not relevant' [d] 'open browser' or type [quit] to exit")
+    cat (paste("Press [a] 'relevant' [s] 'not relevant' [d] 'open browser' or type [quit] to exit", "\n") )
     input <- readline()
     return(input)
   }
@@ -34,14 +34,16 @@ code_tweet_user <- function(user_df, startrow=1)
     while(!input %in% c("a", "d", "s", "quit")){
       cat("type a valid option")
       input <- readkey_code(user_df)
+      cat("\014")  
     }
     # check: open browser
     while(input %in% c("d") ) {  browseURL(paste0("https://twitter.com/",
                                                   user_df[i,"screenName"]))
       input <- readkey_code(user_df)
+      cat("\014")  
       if (input == "quit") {return(user_df)}
     }
-    # save valdi coding in cell
+    # save valid coding in cell
     if (input %in% c("a","s")) {
       user_df$relevant[i]  <- input }
     # exit if intended
