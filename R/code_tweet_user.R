@@ -33,7 +33,7 @@ code_tweet_user <- function(user_df, startrow=1)
     cat("\014")
     # check for valid input
     while(!input %in% c("a", "d", "s","w","quit")){
-      cat("type a valid option")
+      cat("type a valid option \n")
       input <- readkey_code(user_df)
       cat("\014")  
     }
