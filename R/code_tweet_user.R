@@ -23,7 +23,7 @@ code_tweet_user <- function(user_df, startrow=1)
   readkey_code <- function(user_df=user_df)
   {
     cat( paste(user_df$name[i], user_df$description[i], user_df$location[i], user_df$lang[i], sep="\n") )
-    message (paste("Press [a] 'relevant' [s] 'not relevant' [d] 'open browser' or type [quit] to exit", "\n") )
+    message (paste("Press [a] 'relevant'","[s] 'not relevant'","unclear [w]","[d] 'open browser'","or type [quit] to exit\n", sep="\n") )
     input <- readline()
     return(input)
   }
@@ -32,7 +32,7 @@ code_tweet_user <- function(user_df, startrow=1)
     input <- readkey_code(user_df)
     cat("\014")
     # check for valid input
-    while(!input %in% c("a", "d", "s", "quit")){
+    while(!input %in% c("a", "d", "s","w","quit")){
       cat("type a valid option")
       input <- readkey_code(user_df)
       cat("\014")  
@@ -45,7 +45,7 @@ code_tweet_user <- function(user_df, startrow=1)
       if (input == "quit") {return(user_df)}
     }
     # save valid coding in cell
-    if (input %in% c("a","s")) {
+    if (input %in% c("a","s","w")) {
       user_df$relevant[i]  <- input }
     # exit if intended
     if (input == "quit") {return(user_df)}
