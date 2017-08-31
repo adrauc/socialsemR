@@ -24,4 +24,3 @@ open_pictures_insta(ensoie_df)
  }
 
 }
-

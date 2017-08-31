@@ -25,4 +25,3 @@ open_facebook_comment(comments_df$id, "TheVoiceOfGermany")
 }
 
 }
-

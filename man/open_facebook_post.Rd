@@ -25,4 +25,3 @@ open_facebook_post(facebook_posts_voice[ ,"id"], "TheVoiceOfGermany")
 }
 
 }
-

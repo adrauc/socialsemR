@@ -8,4 +8,4 @@ Description: This package helps to access the API of the plattform Soundcloud.
     The package includes functions to access users, tracks, and comments.
 License: GPL-3
 Encoding: UTF-8
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1

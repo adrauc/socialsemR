@@ -22,4 +22,3 @@ open_tweet_rest(tweets_df)
 }
 
 }
-

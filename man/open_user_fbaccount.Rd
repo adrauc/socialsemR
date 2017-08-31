@@ -22,4 +22,3 @@ open_user_fbaccount(comments_df[ ,"from_id"])
 }
 
 }
-
