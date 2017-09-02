@@ -68,6 +68,6 @@ code_tweet_user <- function(user_df, startrow=1)
     if (input == "quit") {return(user_df)}
     cat(paste("finished with row ", i, "\n"))
     # backup codings in case function crashes
-    xx_backup_user_df <<- user_df
+    save(user_df, file="xx_user_df.RData"
   }
 }
