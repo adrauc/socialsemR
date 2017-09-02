@@ -46,21 +46,21 @@ code_tweet_user <- function(user_df, startrow=1)
     }
     
     # check: open browser
-    while(input %in% c("d") ) {  browseURL(paste0("https://twitter.com/",
-                                                  user_df[i,"screenName"]))
+    while(input %in% c("d","f") ) {  
+      if (input == "d") { 
+      browseURL(paste0("https://twitter.com/", user_df[i,"screenName"]))
       input <- readkey_code(user_df)
       cat("\014")  
       if (input == "quit") {return(user_df)}
+      }
+      if (input == "f") {
+        browseURL(paste0("https://www.google.ch/search?q=",
+                         gsub(" ", "+", user_df$name[i]) ) )
+        input <- readkey_code(user_df)
+        cat("\014")  
+        if (input == "quit") {return(user_df)}
+      }
     }
-    
-    # check: Google
-    while(input %in% c("f") ) {  browseURL(paste0("https://www.google.ch/search?q=", 
-                                                  gsub(" ", "+", user_df$name[i]) ) )
-      input <- readkey_code(user_df)
-      cat("\014")  
-      if (input == "quit") {return(user_df)}
-    }
-
     # save valid coding in cell
     if (input %in% c("a","s","w")) {
       user_df$relevant[i]  <- input }
